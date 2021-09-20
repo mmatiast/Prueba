@@ -7,14 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    use HasFactory;
-    protected $fillable = [
-        'city_id',
-        'company_id',
-        'user_id',
-        'presupuesto',
-        'name',
-        'fecha_ejecucion'
+    protected $fillable = ['presupuesto', 'name','fecha_ejecucion'
 
     ];
 }
