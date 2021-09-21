@@ -12,6 +12,13 @@ class ProjectController extends Controller
         'projects' => Project::paginate()
        ]);
     }
+
+    public function create()
+     {
+       return view('projects.create');
+
+     }
+
     public function show($id)
      {
        return view('projects.show', [
@@ -19,14 +26,9 @@ class ProjectController extends Controller
        ]);
      }
 
-      public function create()
-     {
-       return view('projects.create');
-     }
-
      public function store(SaveProjectRequest $request)
      {
-        Project::create($request->validated());
+        Project::create($request->all());
         return redirect()->route('projects.index')->with('status', 'El proyecto fue creado con exitos');
      }
      public function edit(Project $project)

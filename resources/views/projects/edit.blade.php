@@ -8,7 +8,8 @@
 
  <form method="POST" action="{{ route('projects.update', ['id' => $project->id])}}">
  	@method('PATCH')
- 	@include('projects.form', ['btnText'=> 'Actualizar'])
+ 	@include('projects.formedit', ['btnText'=> 'Actualizar'])
 
  </form>
+
 @endsection

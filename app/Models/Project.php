@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = ['presupuesto', 'name','fecha_ejecucion'
+    protected $fillable = ['name','ciudad','compania','presupuesto','fecha_ejecucion'
 
     ];
 }
